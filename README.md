@@ -26,7 +26,7 @@ Make sure you have the following dependencies installed on your system:
 1. Clone this repository to your local machine using:
 
    ```bash
-   git clone https://github.com/your-username/NextwindTS-Starter.git
+   git clone https://github.com/FarhanRafid97/NextwindTS-Starter.git
 
    ```
 
