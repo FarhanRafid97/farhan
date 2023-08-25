@@ -1,7 +1,7 @@
 const FirstAsset = () => {
   return (
     <svg
-      className="w-[240px] lg:w-[340px] md:block hidden absolute left-[100px] top-[70px]"
+      className="w-[240px] lg:w-[240px] md:block hidden absolute left-[100px] top-[50px]"
       xmlns="http://www.w3.org/2000/svg"
       width="523"
       height="214"
@@ -97,7 +97,7 @@ const LeftHeroAsset = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="410"
-      className=" left-[-70px] absolute  top-[-100px]"
+      className=" left-[-70px] absolute  top-[-230px]"
       height="1029"
       viewBox="0 0 410 1029"
       id="sauce-drip-outline"
