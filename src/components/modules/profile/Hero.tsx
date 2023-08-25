@@ -4,8 +4,8 @@ import { HeroAsset, LeftHeroAsset } from './assets';
 
 const Hero = () => {
   return (
-    <section className="section-container ">
-      <div className="w-full h-full  flex">
+    <section className="section-container items-start ">
+      <div className="w-full h-[90%] flex">
         <div className="w-full lg:w-[70%] p-4 h-full padding-left-layout  flex   bg-primary">
           <div className="my-auto lg:w-[500px]  w-full">
             <h1 className="text-secondary font-bold text-[56px]">Fullstack Engineer.</h1>
@@ -18,14 +18,14 @@ const Hero = () => {
         </div>
         <div className="lg:w-[30%] h-full relative bg-secondary">
           <HeroAsset />
-          <div className=" w-[240px] h-[340px] lg:block hidden absolute top-[300px]  left-[-140px] border-[4px] border-white  " />
-          <div className=" absolute lg:block hidden  top-1/2 transform -translate-y-1/2 left-[-180px]    w-[250px] h-[320px]">
+          <div className=" w-[240px] h-[340px] lg:block hidden absolute top-[230px]  left-[-140px] border-[4px] border-white  " />
+          <div className=" absolute lg:block hidden  top-1/2 transform -translate-y-1/2 left-[-180px]    w-[240px] h-[340px]">
             <Image
               src="/assets/profilePict4.jpg"
               width="0"
               height="0"
               sizes="100vw"
-              className="w-[260px] rounded h-[370px]"
+              className="w-[240px] rounded h-[340px]"
               alt="good"
             />
           </div>
