@@ -7,11 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#4831d4',
+        ascent: '#3d155f',
+        secondary: '#CBF281',
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'card-shine':
+          'radial-gradient(1000px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 20%)',
+        'border-shine':
+          'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),rgba(255, 165, 1), rgba(144,0, 144, 1),rgba(14,0, 144, 1), transparent 40%)',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

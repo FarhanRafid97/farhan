@@ -1,0 +1,16 @@
+.card::before,
+.card::after {
+  @apply absolute left-0 top-0 h-full w-full rounded-[inherit] opacity-0 transition-opacity duration-500 content-[""];
+}
+
+.card::after {
+  @apply z-10 bg-border-shine;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cards:hover > .card::after {
+  opacity: 1;
+}

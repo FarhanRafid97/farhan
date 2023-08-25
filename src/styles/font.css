@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Roboto-google';
+  src: url('../../public/font/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-google';
+  src: url('../../public/font/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700; /* This is the font-weight for bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-google';
+  src: url('../../public/font/Roboto/Roboto-Black.ttf') format('truetype');
+  font-weight: 900; /* This is the font-weight for black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-google';
+  src: url('../../public/font/Roboto/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100; /* This is the font-weight for black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'plaster-google';
+  src: url('../../public/font/Plaster-Regular.ttf') format('truetype');
+
+  font-style: normal;
+}
