@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const PostPreview = ({ ...props }) => {
   const pathName = usePathname().split('/')[1];
-  console.log(pathName);
+
   return (
     <Link href={`/blog/${props.slug}?backUrl=${pathName}`}>
       <div className="border border-[#404040] w-full dark:border-neutral-700 bg-[#262626] hover:bg-[#262626]/30  dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4 ">

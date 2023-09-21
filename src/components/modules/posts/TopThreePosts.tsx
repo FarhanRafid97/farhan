@@ -11,7 +11,6 @@ const TopThreePosts = () => {
     const getdata = async () => {
       const dataReq = await fetch('http://localhost:3000/api/top-3-posts');
       const jsonData = await dataReq.json();
-      console.log(jsonData);
       if (!ignore) {
         setData(jsonData.response);
       }
