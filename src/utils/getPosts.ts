@@ -21,7 +21,6 @@ const getPostMetadata = (): PostMetadata[] => {
     };
   });
 
-  console.log(posts);
   return posts;
 };
 

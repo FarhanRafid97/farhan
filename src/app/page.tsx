@@ -21,8 +21,8 @@ const ProfileSumarry = () => {
         <div className="w-[150px] h-[150px] md:min-w-[120px] bg-white   rounded-[50%] overflow-hidden md:h-[140px]">
           <Image
             src="/assets/profile2.jpg"
-            width={450}
-            height={450}
+            width={150}
+            height={150}
             className="rounded-lg  "
             priority
             alt="profile pict"

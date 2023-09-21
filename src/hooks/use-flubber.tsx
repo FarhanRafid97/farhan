@@ -1,6 +1,7 @@
 import { interpolate } from 'flubber';
 import { MotionValue, useTransform } from 'framer-motion';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getIndex = (_: any, index: number) => index;
 
 export function useFlubber(progress: MotionValue<number>, paths: string[]) {
