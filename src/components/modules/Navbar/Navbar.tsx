@@ -1,32 +1,34 @@
-import { Gamepad2 } from 'lucide-react';
-import { useEffect, useState } from 'react';
+'use client';
+import { Home, Library } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 const Navbar = () => {
-  const [backgroundNavbar, setBackgroundNavbar] = useState('bg-transparent');
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 100) {
-        setBackgroundNavbar('bg-black/30');
-      } else {
-        setBackgroundNavbar('bg-transparent');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const path = usePathname();
 
   return (
-    <div
-      className={`fixed z-[99] w-full px-[50px] py-4 bg-transparent  animation-background duration-1000  ${backgroundNavbar}`}
-    >
-      <div className="text-secondary flex items-center gap-1">
-        <Gamepad2 className=" text-xl" />
-        <span className="cool-text text-xl">F</span>
-      </div>
-    </div>
+    <nav className="w-full mb-12">
+      <ul className="flex gap-4 items-center">
+        <Link href="/">
+          <li
+            className={`${path === '/' ? 'text-white' : 'text-text-gray'} flex gap-1 items-center`}
+          >
+            <Home size={20} />
+            Home
+          </li>
+        </Link>
+        <Link href="/blog">
+          <li
+            className={`${
+              path.split('/')[1] === 'blog' ? 'text-white' : 'text-text-gray'
+            } flex gap-1 items-center`}
+          >
+            <Library size={20} />
+            Blog
+          </li>
+        </Link>
+      </ul>
+    </nav>
   );
 };
 

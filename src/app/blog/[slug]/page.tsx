@@ -1,5 +1,6 @@
 import fs from 'fs';
 
+import BackArrowBlog from '@/components/BackArrowBlog';
 import getPostMetadata from '@/utils/getPosts';
 import matter from 'gray-matter';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
@@ -23,16 +24,17 @@ export const generateStaticParams = async () => {
 
 const PostPage = (props: any) => {
   const slug = props.params.slug;
+
   const post = getPostContent(slug);
   return (
-    <div className="w-full flex justify-center flex-col items-center ">
-      <div className="my-12 text-center">
-        <h1 className="text-2xl text-slate-600 ">{post.data.title}</h1>
-        <p className="text-slate-400 mt-2">{post.data.date}</p>
+    <div className="w-full flex justify-center  flex-col items-center  relative">
+      <div className="mb-8">
+        <BackArrowBlog />
       </div>
 
-      <article className="prose">
+      <article className="prose    overflow-hidden  prose-invert">
         <ReactMarkdown
+          className="max-w-[90vw] px-1 md:w-full"
           components={{
             code({ inline, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || '');
