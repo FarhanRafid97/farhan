@@ -8,9 +8,9 @@ const TopThreePosts = () => {
 
   useEffect(() => {
     let ignore = false;
-    // https://farhan-ten.vercel.app/api/top-3-posts
+
     const getdata = async () => {
-      const dataReq = await fetch('http://localhost:3000/api/top-3-posts');
+      const dataReq = await fetch('https://farhan-ten.vercel.app/api/top-3-posts');
       const jsonData = await dataReq.json();
 
       if (!ignore) {
