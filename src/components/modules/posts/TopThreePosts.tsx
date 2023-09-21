@@ -5,12 +5,14 @@ import { useEffect, useState } from 'react';
 const TopThreePosts = () => {
   const [data, setData] = useState<PostMetadata[]>([]);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     let ignore = false;
-
+    // https://farhan-ten.vercel.app/api/top-3-posts
     const getdata = async () => {
-      const dataReq = await fetch('https://farhan-ten.vercel.app/api/top-3-posts');
+      const dataReq = await fetch('http://localhost:3000/api/top-3-posts');
       const jsonData = await dataReq.json();
+      console.log(jsonData);
       if (!ignore) {
         setData(jsonData.response);
       }
@@ -37,6 +39,7 @@ const TopThreePosts = () => {
                 slug={post.slug}
                 date={post.date}
                 subtitle={post.subtitle}
+                tags={post.tags}
                 key={i}
                 title={post.title}
               />

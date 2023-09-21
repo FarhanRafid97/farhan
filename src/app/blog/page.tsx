@@ -4,7 +4,7 @@ import getPostMetadata from '@/utils/getPosts';
 
 export default async function Blog() {
   const data = getPostMetadata();
-
+  console.log(data);
   return (
     <div className="flex  items-center justify-center">
       <div className={`${style.cards} w-full flex flex-col gap-4`}>
@@ -13,6 +13,7 @@ export default async function Blog() {
             slug={post.slug}
             date={post.date}
             subtitle={post.subtitle}
+            tags={post.tags}
             key={i}
             title={post.title}
           />

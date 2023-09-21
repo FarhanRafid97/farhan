@@ -2,7 +2,7 @@ import { PostMetadata } from '@/types/Posts';
 import fs from 'fs';
 import matter from 'gray-matter';
 
-const getPostMetadata = (): PostMetadata[] => {
+export const getTop3Posts = (): PostMetadata[] => {
   const folder = 'src/content/';
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith('.md'));
@@ -12,7 +12,7 @@ const getPostMetadata = (): PostMetadata[] => {
     const fileContents = fs.readFileSync(`src/content/${fileName}`, 'utf8');
 
     const matterResult = matter(fileContents);
-
+    console.log(matterResult.data);
     return {
       title: matterResult.data.title,
       date: matterResult.data.date,
@@ -25,4 +25,4 @@ const getPostMetadata = (): PostMetadata[] => {
   return posts;
 };
 
-export default getPostMetadata;
+export default getTop3Posts;

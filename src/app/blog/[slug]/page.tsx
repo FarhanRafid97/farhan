@@ -1,17 +1,19 @@
 import fs from 'fs';
 
 import BackArrowBlog from '@/components/BackArrowBlog';
-import getPostMetadata from '@/utils/getPosts';
+
 import matter from 'gray-matter';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import getPostMetadata from '@/utils/getPosts';
 
 const getPostContent = (slug: string) => {
   const folder = 'src/content/';
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
+
   return matterResult;
 };
 

@@ -1,4 +1,4 @@
-import { getTop3Posts } from '@/utils/getPosts';
+import getTop3Posts from '@/utils/getTop3Posts';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
