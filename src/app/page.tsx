@@ -18,11 +18,11 @@ const ProfileSumarry = () => {
   return (
     <div className="flex flex-col w-full gap-12 ">
       <div className="flex gap-4 mt-8 md:mt-12 flex-col md:flex-row">
-        <div className="w-[180px] h-[150px] md:min-w-[130px] bg-white   rounded-[50%] overflow-hidden md:h-[140px]">
+        <div className="w-[150px] h-[150px] md:min-w-[130px] bg-white   rounded-[50%] overflow-hidden md:h-[140px]">
           <Image
             src="/assets/prof1.jpg"
             width={190}
-            height={180}
+            height={190}
             className="rounded-lg  "
             priority
             alt="profile pict"
