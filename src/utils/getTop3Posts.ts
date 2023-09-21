@@ -12,7 +12,7 @@ export const getTop3Posts = (): PostMetadata[] => {
     const fileContents = fs.readFileSync(`src/content/${fileName}`, 'utf8');
 
     const matterResult = matter(fileContents);
-    console.log(matterResult.data);
+
     return {
       title: matterResult.data.title,
       date: matterResult.data.date,
